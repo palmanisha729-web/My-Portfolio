@@ -121,7 +121,7 @@
             <p class="section-subtitle">Real metrics drawn from projects, learning, and certifications.</p>
             <div class="stats-grid">
                 <article class="stats-card">
-                    <span class="stats-value">10+</span>
+                    <span class="stats-value">8+</span>
                     <p class="stats-label">Projects Completed</p>
                 </article>
                 <article class="stats-card">
@@ -180,8 +180,15 @@
             <h2 class="section-title">Featured Projects</h2>
             <p class="section-subtitle">Business-focused data solutions with measurable impact.</p>
             <h2 class="project-label project-label--hero">Top 4 Projects</h2>
-            <div class="projects-grid top-four">
-                <article class="project-card">
+            <div class="project-carousel-shell">
+                <div class="project-carousel-controls project-carousel-controls--top">
+                    <button class="project-carousel-btn" data-carousel-target="top-projects" type="button" aria-label="Scroll to next project">
+                         Scroll left to see next project
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="projects-grid top-four projects-carousel" data-carousel="top-projects">
+                    <article class="project-card">
                     <div class="project-card-row">
                         <div>
                             <h3>Credit Card Approval Prediction</h3>
@@ -322,10 +329,18 @@
                         </a>
                     </div>
                 </article>
+                </div>
             </div>
-            <p class="project-label project-label--hero">Many more</p>
-            <div class="projects-grid">
-                <article class="project-card">
+            <p class="project-label project-label--hero">Many more 8+</p>
+            <div class="project-carousel-shell">
+                <div class="project-carousel-controls project-carousel-controls--top">
+                    <button class="project-carousel-btn" data-carousel-target="more-projects" type="button" aria-label="Scroll to next project">
+                         Scroll left to see next project
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="projects-grid projects-carousel" data-carousel="more-projects">
+                    <article class="project-card">
                     <div class="project-card-row">
                         <div>
                             <h3>Telecom Customer Churn &amp; Revenue Risk Analysis</h3>
@@ -570,6 +585,7 @@
                             <i class="fas fa-file-lines"></i>Presentation</a>
                     </div>
                 </article>
+                </div>
             </div>
         </div>
     </section>
