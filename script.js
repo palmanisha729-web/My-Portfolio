@@ -311,6 +311,22 @@ scrollTopBtn.addEventListener('mouseleave', () => {
     scrollTopBtn.style.boxShadow = '0 5px 15px rgba(99, 102, 241, 0.4)';
 });
 
+// Scroll carousels using the Next project buttons
+document.querySelectorAll('[data-carousel-target]').forEach(button => {
+    const targetName = button.dataset.carouselTarget;
+    const carousel = document.querySelector(`[data-carousel="${targetName}"]`);
+    if (!carousel) return;
+
+    button.addEventListener('click', () => {
+        const gap = parseFloat(getComputedStyle(carousel).gap || '24') || 24;
+        const card = carousel.querySelector('.project-card');
+        const fallbackStep = Math.round(carousel.clientWidth * 0.9);
+        const scrollStep = card ? Math.round(card.offsetWidth + gap) : fallbackStep;
+        const direction = button.dataset.carouselDirection === 'prev' ? -1 : 1;
+        carousel.scrollBy({ left: scrollStep * direction, behavior: 'smooth' });
+    });
+});
+
 // Console message
 console.log('%c👋 Hello! Thanks for checking out my portfolio!', 'color: #6366f1; font-size: 16px; font-weight: bold;');
 console.log('%cInterested in working together? Let\'s connect!', 'color: #8b5cf6; font-size: 14px;');
