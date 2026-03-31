@@ -221,6 +221,7 @@ body {
         object-fit: cover;
     }
 }
+{
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -321,6 +322,50 @@ body {
     background: var(--primary-color);
     color: white;
     transform: translateY(-2px);
+}
+
+.btn-glow {
+    position: relative;
+    z-index: 1;
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    box-shadow:
+        0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.btn-glow::after {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.7), rgba(139, 92, 246, 0.8), rgba(236, 72, 153, 0.7));
+    filter: blur(30px);
+    opacity: 0.75;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    animation: pulseGlow 3.8s ease-in-out infinite;
+    z-index: -1;
+}
+
+.btn-glow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+}
+
+.btn-glow:hover::after {
+    opacity: 0.95;
+    transform: scale(1.04);
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        transform: scale(0.98);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.02);
+        opacity: 0.8;
+    }
 }
 
 .btn-outline {
