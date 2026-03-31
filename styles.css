@@ -23,6 +23,7 @@
 }
 
 html {
+    font-size: 15px; /* Reduced from default 16px */
     scroll-behavior: smooth;
 }
 
@@ -183,7 +184,7 @@ body {
 }
 
 .hero-title {
-    font-size: clamp(2.8rem, 4.6vw, 3.5rem);
+    font-size: clamp(2rem, 3vw, 2.5rem);
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.2;
@@ -504,12 +505,12 @@ body {
 
 /* About Section */
 .about {
-    padding: 100px 0;
+    padding: 70px 0;
     background: var(--light-bg);
 }
 
 .section-title {
-    font-size: 3rem;
+    font-size: clamp(1.8rem, 2.5vw, 2.4rem);
     text-align: center;
     margin-bottom: 1rem;
     background: var(--gradient-primary);
@@ -628,7 +629,7 @@ body {
 
 /* Stats Section */
 .stats {
-    padding: 100px 0;
+    padding: 70px 0;
     background: var(--dark-bg);
 }
 
@@ -664,7 +665,7 @@ body {
 
 /* Skills Section */
 .skills {
-    padding: 100px 0;
+    padding: 70px 0;
     background: var(--dark-bg);
 }
 
@@ -796,11 +797,88 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.projects-carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1.25rem;
+    margin-top: 2.2rem;
+    padding: 0 12px 1.5rem;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 24px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.projects-carousel::-webkit-scrollbar {
+    display: none;
+    height: 0;
+}
+
+.projects-grid.top-four.projects-carousel {
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.projects-carousel .project-card {
+    flex: 0 0 100%;
+    max-width: 1200px;
+    scroll-snap-align: start;
+}
+
+.project-carousel-shell {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    align-items: stretch;
+}
+
+.project-carousel-controls {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.project-carousel-controls--top {
+    margin-bottom: 0.5rem;
+}
+
+.project-carousel-btn {
+    align-items: center;
+    background: var(--gradient-primary);
+    border: none;
+    border-radius: 999px;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    font-weight: 600;
+    gap: 0.4rem;
+    justify-content: center;
+    padding: 10px 22px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.35);
+}
+
+.project-carousel-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(99, 102, 241, 0.35);
+}
+
+.project-carousel-btn:focus-visible {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 3px;
+}
+
+.project-carousel-btn i {
+    font-size: 0.85rem;
+}
+
 .project-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 15px;
-    padding: 30px;
+    padding: 20px;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -817,7 +895,7 @@ body {
     background: var(--card-bg);
     border-color: rgba(99, 102, 241, 0.25);
     border-radius: 24px;
-    padding: 36px;
+    padding: 24px;
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.25);
 }
 
@@ -832,7 +910,7 @@ body {
 }
 
 .projects-grid.top-four .project-card h3 {
-    font-size: 1.75rem;
+    font-size: 1.35rem;
     color: #f8fafc;
 }
 
@@ -963,7 +1041,7 @@ body {
 }
 
 .project-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-bottom: 15px;
     color: var(--text-primary);
 }
@@ -1348,6 +1426,33 @@ body {
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .projects-carousel {
+        display: grid;
+        grid-template-columns: 1fr;
+        overflow-x: visible;
+        scroll-snap-type: none;
+        padding-bottom: 0;
+        margin-top: 1.5rem;
+    }
+
+    .projects-carousel .project-card {
+        flex: 1 1 auto;
+        max-width: 100%;
+        scroll-snap-align: none;
+    }
+
+    .project-carousel-controls {
+        justify-content: center;
+    }
+
+    .project-carousel-controls--top {
+        justify-content: center;
+    }
+
+    .project-carousel-btn {
+        width: 100%;
     }
 
     .contact-content {
