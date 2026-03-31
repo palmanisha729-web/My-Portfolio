@@ -68,73 +68,6 @@ portfolio/
 ├── script.js           # Interactive features and animations
 └── README.md          # Documentation (this file)
 ```
-
-## 🎯 Customization Guide
-
-### Updating Personal Information
-
-Edit the following sections in `index.html`:
-
-1. **Name and Title**: Update in the hero section
-2. **About Text**: Modify the about section content
-3. **Projects**: Add or remove project cards in the projects section
-4. **Skills**: Adjust skill levels in the skills section
-5. **Contact Info**: Update LinkedIn and GitHub URLs
-
-### Changing Colors
-
-The color scheme is defined in CSS variables in `styles.css`:
-
-```css
-:root {
-    --primary-color: #6366f1;      /* Main accent color */
-    --secondary-color: #8b5cf6;    /* Secondary accent */
-    --accent-color: #ec4899;       /* Additional accent */
-    --dark-bg: #0f172a;            /* Dark background */
-    --light-bg: #1e293b;           /* Light background */
-}
-```
-
-### Adding New Projects
-
-Copy and paste a project card in the projects section and update:
-- Icon class
-- Project title
-- Description
-- Tags
-- GitHub link
-
-## 📱 Responsive Breakpoints
-
-- **Desktop**: 1200px and above
-- **Tablet**: 768px to 1199px
-- **Mobile**: Below 768px
-
-## ⚡ Performance Features
-
-- Optimized animations using CSS transforms
-- Lazy loading of scroll animations
-- Minimal JavaScript for fast load times
-- Efficient CSS with modern layout techniques
-
-## 🌐 Deployment Options
-
-### GitHub Pages
-1. Create a new repository on GitHub
-2. Upload all files (index.html, styles.css, script.js)
-3. Go to Settings > Pages
-4. Select main branch and save
-5. Your site will be live at `https://yourusername.github.io/repository-name`
-
-### Netlify
-1. Drag and drop the portfolio folder to Netlify
-2. Your site will be deployed instantly with a custom URL
-
-### Vercel
-1. Import your GitHub repository
-2. Deploy with one click
-3. Get automatic deployments on every push
-
 ## 📊 Projects Highlighted
 
 ### 1. Customer Behavior Analysis
@@ -193,24 +126,6 @@ This portfolio is designed to stand out for Business Analyst and Data Science ro
 3. **Full-Stack Capability**: Demonstrates ability to build tools, not just reports
 4. **Strategic Thinking**: Shows understanding of how data drives business decisions
 5. **Professional Presentation**: Executive-ready summaries and clear value propositions
-
-## 🚀 Next Steps for Enhancement
-
-To further strengthen this portfolio:
-
-1. **Add Project READMEs**: Each GitHub repo should include:
-   - GIF/screenshot of the project
-   - "Business Impact" section with metrics
-   - "Technical Challenge" section explaining key decisions
-   
-2. **Create Executive Summaries**: 1-page PDF briefs for top projects
-
-3. **LinkedIn Integration**: 
-   - Update headline: "Data Science Student at IIT Madras | Aspiring Business Analyst | Python, SQL & Analytics"
-   - Add projects to Featured section with executive summaries
-
-4. **GitHub Pages Deployment**: Host this portfolio at `username.github.io`  
-
 ---
 
 **Built with** ❤️ **for Data Science and Analytics Career Opportunities**
